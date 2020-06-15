@@ -13,5 +13,4 @@ defmodule VotingApi.Admin do
 
     timestamps()
   end
-
 end
