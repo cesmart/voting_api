@@ -1,4 +1,7 @@
 defmodule VotingApi.Admin do
+  @moduledoc """
+
+  """
   use Ecto.Schema
   import Ecto.Changeset
 
