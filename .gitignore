@@ -29,6 +29,4 @@ voting_api-*.tar
 
 *.iml
 
-*.lock
-
 .idea/
