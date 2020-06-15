@@ -27,11 +27,13 @@ defmodule VotingApi.DataCase do
     end
   end
 
+  alias Ecto.Adapters.SQL.Sandbox
+
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(VotingApi.Repo)
+    :ok = Sandbox.checkout(VotingApi.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(VotingApi.Repo, {:shared, self()})
+      Sandbox.mode(VotingApi.Repo, {:shared, self()})
     end
 
     :ok
